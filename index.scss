@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Dancing+Script:wght@500&display=swap");
+$font-big: "Aboreto", cursive;
+$font-nice: "Dancing Script", cursiv;
+h1 {
+  color: rebeccapurple;
+  font-family: $font-nice;
+}
+h3 {
+  font-family: $font-big;
+  color: limegreen;
+}
+#two {
+  font-family: $font-nice;
+  color: red;
+}
+.ino {
+  color: aqua;
+  font-size: 40px;
+}
