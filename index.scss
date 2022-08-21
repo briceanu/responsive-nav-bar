@@ -1,10 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Dancing+Script:wght@500&display=swap");
-$font-big: "Aboreto", cursive;
-$font-nice: "Dancing Script", cursiv;
-$light-green: rgb(43, 236, 43);
-$dark-green: rgb(56, 190, 56);
-$hover-color: rgb(59, 145, 59);
+@import "css/variables";
+@import "css/fonts";
 * {
   box-sizing: border-box;
 }
@@ -71,7 +66,33 @@ h1 {
   }
 }
 //end of nav-bar
-
+// add the main which has inside an image and a description
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: url(https://images.pexels.com/photos/1022692/pexels-photo-1022692.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+}
+img {
+  max-height: 400px;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 100px wheat;
+  margin-left: 0.6em;
+}
+img:hover {
+  transform: scale(1.01);
+}
+.container-main h2 {
+  font-family: $font-diana;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+  line-height: 3.7rem;
+  text-align: center;
+  color: rgb(209, 224, 216);
+}
+// end of main
 //media queries
 @media (max-width: 900px) {
   .container {
@@ -98,6 +119,15 @@ h1 {
     a {
       font-size: 1rem;
       font-weight: bolder;
+    }
+  }
+  main {
+    flex-direction: column;
+    img {
+      margin-top: 10px;
+    }
+    h2 {
+      margin-top: 15px;
     }
   }
 }
