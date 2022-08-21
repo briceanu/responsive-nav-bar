@@ -13,6 +13,7 @@ h1 {
   color: rebeccapurple;
   font-family: "Dancing Script", cursiv;
   font-size: 2.3rem;
+  margin-left: 5rem;
 }
 
 .container {
@@ -51,7 +52,7 @@ h1 {
 }
 .container .toggle-button {
   position: absolute;
-  top: 40px;
+  top: -1px;
   right: 5px;
   display: none;
   flex-direction: column;
@@ -78,5 +79,19 @@ h1 {
   }
   .container .toggle-button {
     display: flex;
+  }
+  .container .nav-bar ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .toggle ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container a {
+    font-size: 1rem;
+    font-weight: bolder;
   }
 }

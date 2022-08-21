@@ -16,6 +16,7 @@ h1 {
   color: rebeccapurple;
   font-family: $font-nice;
   font-size: 2.3rem;
+  margin-left: 5rem;
 }
 // customise the nav-bar
 .container {
@@ -54,14 +55,13 @@ h1 {
   }
   .toggle-button {
     position: absolute;
-    top: 40px;
+    top: -1px;
     right: 5px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 50px;
     height: 51px;
-    // background-color: aqua;
     .bar {
       height: 3px;
       width: 140%;
@@ -71,6 +71,7 @@ h1 {
   }
 }
 //end of nav-bar
+
 //media queries
 @media (max-width: 900px) {
   .container {
@@ -83,6 +84,20 @@ h1 {
     }
     .toggle-button {
       display: flex;
+    }
+    .nav-bar ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+    .toggle ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    a {
+      font-size: 1rem;
+      font-weight: bolder;
     }
   }
 }
