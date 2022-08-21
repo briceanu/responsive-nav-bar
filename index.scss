@@ -2,19 +2,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Dancing+Script:wght@500&display=swap");
 $font-big: "Aboreto", cursive;
 $font-nice: "Dancing Script", cursiv;
+$light-green: rgb(43, 236, 43);
+$dark-green: rgb(56, 190, 56);
+$hover-color: rgb(59, 145, 59);
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
 h1 {
   color: rebeccapurple;
   font-family: $font-nice;
+  font-size: 2.3rem;
 }
-h3 {
-  font-family: $font-big;
-  color: limegreen;
+// customise the nav-bar
+.container {
+  width: 100%;
+  height: 4rem;
+  background-color: $light-green;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  ul {
+    display: flex;
+  }
+
+  li {
+    list-style: none;
+  }
+  a {
+    font-weight: 900;
+    font-family: $font-big;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+  }
+  li:hover {
+    transform: scale(1.2);
+    background-color: $dark-green;
+  }
+  a:hover {
+    color: white;
+    font-weight: bolder;
+    font-family: $font-nice;
+    text-shadow: 4px -4px 4px gray;
+    font-size: 1rem;
+  }
+  .toggle-button {
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    height: 51px;
+    // background-color: aqua;
+    .bar {
+      height: 3px;
+      width: 140%;
+      background-color: white;
+      border-radius: 10px;
+    }
+  }
 }
-#two {
-  font-family: $font-nice;
-  color: red;
+//end of nav-bar
+//media queries
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    h1 {
+      margin: 0.1rem 0;
+      padding: 0;
+    }
+    .toggle-button {
+      display: flex;
+    }
+  }
 }
-.ino {
-  color: aqua;
-  font-size: 40px;
-}
+//end of media queries
